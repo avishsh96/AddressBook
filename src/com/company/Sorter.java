@@ -1,20 +1,19 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Sorter {
     ArrayList<Contact> contacts;
-    public Sorter(ArrayList<Contact> jobCandidate) {
-        this.contacts = jobCandidate;
+    public Sorter(ArrayList<Contact> contacts) {
+        this.contacts = contacts;
     }
 
     public ArrayList<Contact> getSortedByName() {
-        Collections.sort(contacts, Contact.nameComparator);
+        contacts.sort(Contact.nameComparator);
         return contacts;
     }
     public ArrayList<Contact> getSortedByZip() {
-        Collections.sort(contacts, Contact.zipComparator);
+        contacts.sort(Contact.zipComparator);
         return contacts;
     }
 }
